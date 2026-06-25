@@ -150,6 +150,7 @@ function Skills() {
         <h2 className="text-5xl font-bold mb-8">
           Contact
         </h2>
+        <h3> hello world </h3>
 
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
           <p>Email: yourmail@gmail.com</p>
