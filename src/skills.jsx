@@ -153,7 +153,7 @@ function Skills() {
 
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
           <p>Email: yourmail@gmail.com</p>
-          <p>GitHub: github.com/mukeshthakur0</p>
+         <a href="GitHub: github.com/mukeshthakur0"/>
           <p>LinkedIn: linkedin.com/in/mukesh</p>
         </div>
       </section>
