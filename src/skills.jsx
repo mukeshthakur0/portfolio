@@ -1,6 +1,6 @@
-import React from "react";
+import "./App.css";
 
-export default function Portfolio() {
+function Skills() {
   const skills = [
     "Python",
     "SQL",
@@ -8,83 +8,106 @@ export default function Portfolio() {
     "Excel",
     "Machine Learning",
     "Pandas",
-    "NumPy",
-    "FastAPI",
     "React",
+    "FastAPI",
     "MongoDB",
+    "Git",
   ];
 
   const projects = [
     {
       title: "LearnFlow AI",
-      description:
-        "AI-powered smart learning platform with PDF analysis, quiz generation, flashcards, summaries, and AI chat.",
+      desc: "AI learning platform with PDF analysis, summaries, quizzes and flashcards.",
     },
     {
       title: "Mind Mirror",
-      description:
-        "Mood tracking and journaling application with AI insights and analytics dashboard.",
+      desc: "AI-powered mood tracking and journaling application.",
     },
     {
       title: "Employee Salary Prediction",
-      description:
-        "Machine learning project to predict employee salaries using regression models.",
+      desc: "Machine Learning project for salary prediction using regression.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      {/* Hero Section */}
-      <section className="container mx-auto px-6 py-20 text-center">
-        <img
-          src="https://via.placeholder.com/180"
-          alt="Profile"
-          className="w-44 h-44 rounded-full mx-auto border-4 border-blue-500"
-        />
+    <div className="min-h-screen bg-[#050816] text-white">
+      {/* Navbar */}
+      <nav className="sticky top-0 backdrop-blur-md border-b border-white/10 px-8 py-5">
+        <div className="max-w-7xl mx-auto flex justify-between">
+          <h1 className="text-2xl font-bold text-cyan-400">
+            Mukesh.dev
+          </h1>
 
-        <h1 className="text-5xl font-bold mt-6">Mukesh Kumar</h1>
+          <div className="hidden md:flex gap-6">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
 
-        <p className="text-xl text-gray-400 mt-4">
-          MCA Student | Data Analyst | Machine Learning Enthusiast
-        </p>
+      {/* Hero */}
+      <section className="min-h-screen flex items-center justify-center px-6">
+        <div className="text-center max-w-4xl">
+          <h1 className="text-6xl md:text-8xl font-black">
+            Mukesh Kumar
+          </h1>
 
-        <div className="mt-8 flex justify-center gap-4">
-          <a
-            href="#contact"
-            className="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700"
-          >
-            Contact Me
-          </a>
+          <h2 className="text-2xl mt-4 text-cyan-400">
+            Data Analyst • AI Developer
+          </h2>
 
-          <a
-            href="#projects"
-            className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black"
-          >
-            View Projects
-          </a>
+          <p className="mt-6 text-gray-400 text-lg">
+            MCA Student passionate about Data Analytics,
+            Machine Learning, Power BI and Full Stack Development.
+          </p>
+
+          <div className="mt-8 flex justify-center gap-4">
+            <button className="px-8 py-4 bg-cyan-500 rounded-full">
+              View Projects
+            </button>
+
+            <button className="px-8 py-4 border border-white/20 rounded-full">
+              Resume
+            </button>
+          </div>
         </div>
       </section>
 
       {/* About */}
-      <section className="container mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+      <section
+        id="about"
+        className="max-w-6xl mx-auto px-6 py-20"
+      >
+        <h2 className="text-5xl font-bold mb-8">
+          About Me
+        </h2>
 
-        <p className="text-gray-300 leading-8">
-          I am an MCA student passionate about Data Analytics, Machine
-          Learning, and Full Stack Development. I enjoy solving real-world
-          problems using Python, SQL, Power BI, and AI technologies.
-        </p>
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+          <p className="text-gray-300 leading-8">
+            I am pursuing MCA from Himachal Pradesh Technical
+            University. I specialize in Data Analytics,
+            SQL, Power BI, Python, Machine Learning and
+            AI-powered applications.
+          </p>
+        </div>
       </section>
 
       {/* Skills */}
-      <section className="container mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">Skills</h2>
+      <section
+        id="skills"
+        className="max-w-6xl mx-auto px-6 py-20"
+      >
+        <h2 className="text-5xl font-bold mb-8">
+          Skills
+        </h2>
 
         <div className="flex flex-wrap gap-4">
           {skills.map((skill) => (
             <span
               key={skill}
-              className="bg-blue-600 px-4 py-2 rounded-full"
+              className="px-5 py-3 rounded-full border border-cyan-500"
             >
               {skill}
             </span>
@@ -95,67 +118,51 @@ export default function Portfolio() {
       {/* Projects */}
       <section
         id="projects"
-        className="container mx-auto px-6 py-16"
+        className="max-w-6xl mx-auto px-6 py-20"
       >
-        <h2 className="text-3xl font-bold mb-8">Projects</h2>
+        <h2 className="text-5xl font-bold mb-8">
+          Projects
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-900 p-6 rounded-xl border border-gray-800"
+              className="bg-white/5 border border-white/10 rounded-3xl p-6"
             >
-              <h3 className="text-xl font-semibold mb-3">
+              <h3 className="text-2xl font-bold">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400">
-                {project.description}
+              <p className="text-gray-400 mt-4">
+                {project.desc}
               </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Education */}
-      <section className="container mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">Education</h2>
-
-        <div className="bg-gray-900 p-6 rounded-xl">
-          <h3 className="text-xl font-semibold">
-            Master of Computer Applications (MCA)
-          </h3>
-
-          <p className="text-gray-400 mt-2">
-            Himachal Pradesh Technical University
-          </p>
-
-          <p className="text-gray-500">
-            2024 - 2026
-          </p>
-        </div>
-      </section>
-
       {/* Contact */}
       <section
         id="contact"
-        className="container mx-auto px-6 py-16"
+        className="max-w-6xl mx-auto px-6 py-20"
       >
-        <h2 className="text-3xl font-bold mb-8">Contact</h2>
+        <h2 className="text-5xl font-bold mb-8">
+          Contact
+        </h2>
 
-        <div className="bg-gray-900 p-6 rounded-xl">
-          <p>Email: mukesh@example.com</p>
-          <p>GitHub: github.com/mukesh</p>
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
+          <p>Email: yourmail@gmail.com</p>
+          <p>GitHub: github.com/mukeshthakur0</p>
           <p>LinkedIn: linkedin.com/in/mukesh</p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-8 border-t border-gray-800">
-        <p className="text-gray-500">
-          © 2026 Mukesh Kumar. All Rights Reserved.
-        </p>
+      <footer className="text-center py-8 border-t border-white/10 text-gray-500">
+        © 2026 Mukesh Kumar | Portfolio
       </footer>
     </div>
   );
 }
+
+export default Skills;
