@@ -162,7 +162,7 @@ function Skills() {
       </section>
 
       <footer className="text-center py-8 border-t border-white/10 text-gray-500">
-        © 2026 Mukesh Kumar | Portfolio
+        © 2026 Mukesh Kumar | Portfolio all copy right reserved
       </footer>
     </div>
   );
