@@ -153,7 +153,7 @@ function Skills() {
         <h3> hello world </h3>
 
         <div className="bg-white/5 border border-white/10 rounded-3xl p-8">
-          <p>Email: yourmail@gmail.com</p>
+          <p>Email: techspace580@gmail.com</p>
          <a href="https://github.com/mukeshthakur0" target="_blank" rel="noopener noreferrer">
            GitHub
          </a>
