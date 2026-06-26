@@ -1,17 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import Skills from './skills.jsx'
-import './App.css'
+import Navbar from "../src/components/Navbar";
+import Hero from "../src/components/Hero";
+import About from "../src/components/About";
+import Skills from "../src/components/Skills";
+import Education from "../src/components/Education";
+import Experience from "../src/components/experience";
+import Projects from "../src/components/projects";
 function App() {
-
-
   return (
     <>
-    <Skills/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Education />
+      <Projects />
+      <Experience />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
